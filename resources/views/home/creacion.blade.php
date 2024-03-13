@@ -9,10 +9,7 @@
 
     <form action="/items" method = "POST" role="form">
         @csrf
-        <div class = "form-group">
-            <h5>ID</h5>
-            <input type="text" class="form-control mb-2" placeholder = "Enter ID" name="id">
-        </div>
+        
         <div class = "form-group">
             <h5>Name</h5>
             <input type="text" class="form-control mb-2" placeholder = "Enter name" name="name">

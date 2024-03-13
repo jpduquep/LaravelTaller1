@@ -18,9 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','App\Http\Controllers\HomeController@index')->name("home.index");
 
-Route::get('/FormCreacion','App\Http\Controllers\ProductController@creacion')->name("home.creacion");
-Route::post('/items','App\Http\Controllers\ProductController@guardar')->name("home.guardar");
-
-Route::get('/ListarObjetos','App\Http\Controllers\ProductController@listar')->name("home.listar");
+Route::get('/FormCreacion','App\Http\Controllers\ItemController@creacion')->name("creacion");
+Route::post('/items','App\Http\Controllers\ItemController@save')->name("home.guardar");
+Route::get('/items/{id}', 'App\Http\Controllers\ItemController@show')->name('items.show');
+Route::delete('/items/{id}', 'App\Http\Controllers\ItemController@destroy')->name('items.destroy');
+Route::get('/ListarObjetos','App\Http\Controllers\ItemController@index')->name("listar");
 
 
